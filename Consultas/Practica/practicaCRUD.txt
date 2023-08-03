@@ -1,0 +1,11 @@
+SELECT *
+FROM usuarios;
+
+INSERT INTO usuarios(nombre, apellido) VALUES('Gessica','Adaro');
+INSERT INTO usuarios(nombre, apellido) VALUES('Gessi','Bogado');
+INSERT INTO usuarios(nombre, apellido) VALUES('Norma','Britez');
+UPDATE esquema_prueba.usuarios SET
+	nombre= 'JAZMIN'
+    WHERE ID = 8;
+DELETE FROM usuarios
+WHERE id= 8;
