@@ -1,0 +1,38 @@
+USE esquema_dojos_y_ninjas;
+SELECT *
+FROM dojos;
+
+SELECT *
+FROM ninjas;
+
+INSERT INTO dojos(nombre, created_at, updated_at) VALUES
+('dojo1',NOW(), NOW()),
+('dojo2',NOW(), NOW()),
+('dojo3',NOW(), NOW());
+SET SQL_SAFE_UPDATES=0;
+DELETE FROM dojos WHERE nombre IN ('dojo1', 'dojo2', 'dojo3');
+INSERT INTO dojos(nombre, created_at, updated_at) VALUES
+('dojo_nuevo1',NOW(), NOW()),
+('dojo_nuevo2',NOW(), NOW()),
+('dojo_nuevo3',NOW(), NOW());
+INSERT INTO ninjas (first_name, dojo_id) VALUES
+  ('Ninja 1', 4),
+  ('Ninja 2', 4),
+  ('Ninja 3', 4);
+  
+  INSERT INTO ninjas (first_name, dojo_id) VALUES
+  ('Ninja 4', 5),
+  ('Ninja 5', 5),
+  ('Ninja 6', 5);
+  
+    INSERT INTO ninjas (first_name, dojo_id) VALUES
+  ('Ninja 7', 6),
+  ('Ninja 8', 6),
+  ('Ninja 9', 6);
+SELECT * FROM ninjas WHERE dojo_id = 4;
+SELECT * FROM ninjas WHERE dojo_id = 5;
+SELECT * FROM ninjas WHERE dojo_id = 6;
+
+SELECT *
+FROM dojos 
+WHERE id=6;
